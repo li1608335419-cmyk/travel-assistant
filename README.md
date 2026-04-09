@@ -171,15 +171,17 @@ kill <PID>
 
 - 用户的一句话是如何被拆成多个子任务的
 - 多个 Agent 和工具是如何协作的
-- 最终回答、酒店卡、景点卡、图片和路线是如何一起生成的
+- 最终回答、酒店卡、景点卡、图片、用餐和 PDF 导出是如何一起生成的
 
 ```mermaid
 flowchart TD
     A["用户打开前端页面
-    frontend/index.html + app.js"] --> B["用户输入问题
+    frontend/index.html + app.js"] --> A1["点选旅行偏好彩色卡片
+    例如: 美食雷达 / 出片路线"]
+    A1 --> B["用户输入问题
     例如: 上海五一的天气怎么样"]
     B --> C["前端 POST /api/chat
-    body: user_id, message, session_id"]
+    body: user_id, message, session_id, skills"]
 
     subgraph API["FastAPI 接入层"]
         C --> D["api/routes/chat.py
@@ -202,17 +204,17 @@ flowchart TD
     end
 
     G --> J["detect_intent()
-    关键字匹配 TravelIntent
+    规则 + LLM 混合识别
     weather_check / itinerary_generation /
     budget_planning / transport_advice /
     destination_choice / qa"]
 
     subgraph Agents["多 Agent 顺序编排"]
         J --> K["PlannerAgent.run()
-        调用 trip_structurer"]
+        调用 trip_structurer + place_resolver"]
         K --> K1["提取结构化字段
         origin / destination / days /
-        budget / travelers / preferences"]
+        budget / travelers / preferences / skills"]
         K1 --> K2["若字段缺失
         生成 follow_up_questions"]
         K2 --> K3["返回:
@@ -271,7 +273,13 @@ flowchart TD
         name / description / detail_url /
         location / business_area"]
 
-        N15 --> N16["invoke_tool_cached(image_search)"]
+        N15 --> N15A["invoke_tool_cached(smart_stop_order)
+        对多景点做顺路排序"]
+
+        N15A --> N15B["invoke_tool_cached(meal_planner)
+        生成早餐 / 午餐 / 晚餐建议"]
+
+        N15B --> N16["invoke_tool_cached(image_search)"]
         N16 --> N17["image_search()
         -> Serper 图片搜索
         用于景点图片展示"]
@@ -296,7 +304,7 @@ flowchart TD
     sources
     rich_content:
     hotels / attractions /
-    attraction_images / route /
+    attraction_images / meals / route /
     weather / weather_notice"]
     N21 --> O
     N22 --> O
@@ -359,7 +367,7 @@ flowchart TD
         汇总追问建议"]
         AI --> AJ["_merge_rich_content()
         合并:
-        hotels / attractions /
+        hotels / attractions / meals /
         attraction_images / route /
         weather / weather_notice"]
         AJ --> AK["构造 OrchestratorResult
@@ -395,10 +403,13 @@ flowchart TD
         酒店推荐卡
         热门景点卡
         景点图片网格
+        用餐建议卡
         路线引导卡"]
         AQ --> AR["renderChips()
         渲染 suggested_actions"]
-        AR --> AS["用户继续追问
+        AR --> AT["exportToPdf()
+        生成封面 / 摘要 / 卡片 / 对话记录"]
+        AT --> AS["用户继续追问
         携带 session_id 进入下一轮"]
     end
 
@@ -417,10 +428,12 @@ flowchart TD
 ### 这张图的阅读重点
 
 - `PlannerAgent` 负责“把自然语言拆成结构化需求”
-- `InfoAgent` 是当前最重的 agent，承担天气、酒店、景点、图片、路线
+- `PlannerAgent` 现在还承担 `place_resolver` 的地点兜底解析
+- `InfoAgent` 是当前最重的 agent，承担天气、酒店、景点、图片、用餐、路线
 - 天气问题已经改成高德优先，不再依赖旧网页搜索
 - Redis 不只是存对话，还存工具缓存和旅行画像
 - 最终回答不是固定全靠模型，有一部分场景会程序化直出
+- 前端还额外承接了旅行偏好卡片和 PDF 导出
 
 ---
 
@@ -448,9 +461,9 @@ sequenceDiagram
     participant LLM as DeepSeek/OpenAI 兼容模型
     participant LOG as Logger
 
-    U->>FE: 输入旅行问题
-    FE->>API: POST /api/chat {user_id, message, session_id}
-    API->>ORCH: run(user_id, user_message, session_id)
+    U->>FE: 点选旅行偏好卡片 + 输入旅行问题
+    FE->>API: POST /api/chat {user_id, message, session_id, skills}
+    API->>ORCH: run(user_id, user_message, session_id, skills)
 
     ORCH->>REDIS: require_session()
     REDIS-->>ORCH: SessionState
@@ -461,8 +474,14 @@ sequenceDiagram
     ORCH->>LOG: log_intent()
 
     ORCH->>PLAN: run(message, session, intent)
-    PLAN->>TOOLS: trip_structurer(message)
+    PLAN->>TOOLS: trip_structurer(message, skills)
     TOOLS-->>PLAN: structured_trip
+    opt 目的地不明确
+        PLAN->>TOOLS: place_resolver(text)
+        TOOLS->>AMAP: 地理编码
+        AMAP-->>TOOLS: 地点结果
+        TOOLS-->>PLAN: resolved place
+    end
     PLAN-->>ORCH: AgentResult
     ORCH->>LOG: log_agent_result(planner)
     ORCH->>REDIS: update_profile()
@@ -501,6 +520,14 @@ sequenceDiagram
         AMAP-->>TOOLS: 景点 POI
         TOOLS-->>INFO: attractions
 
+        INFO->>TOOLS: smart_stop_order(city, attractions)
+        TOOLS-->>INFO: ordered attractions
+
+        INFO->>TOOLS: meal_planner(city)
+        TOOLS->>AMAP: 高德 POI 搜索(美食)
+        AMAP-->>TOOLS: 餐饮 POI
+        TOOLS-->>INFO: meals
+
         INFO->>TOOLS: image_search(query)
         TOOLS->>SERPER: 图片搜索
         SERPER-->>TOOLS: 图片结果
@@ -538,8 +565,9 @@ sequenceDiagram
     FE->>FE: renderMessage()
     FE->>FE: renderRichContent()
     FE->>FE: renderChips()
+    FE->>FE: exportToPdf() / print iframe
 
-    FE-->>U: 展示回答、酒店卡、景点卡、图片、路线
+    FE-->>U: 展示回答、酒店卡、景点卡、图片、用餐、路线、PDF 导出
 ```
 
 ### 这张图的阅读重点
@@ -547,7 +575,9 @@ sequenceDiagram
 - 编排器是主入口，所有 agent 都由它统一调度
 - Redis 在请求开始、工具缓存保存、回复落库这几处都会参与
 - 高德和 Serper 都不是直接由前端调用，而是后端工具层统一调用
+- `place_resolver / smart_stop_order / meal_planner` 已经进入实际时序
 - 最终回答并不总是交给 LLM，天气场景会程序化生成
+- PDF 导出发生在前端，但使用的是同一轮会话结果
 
 ---
 
@@ -572,6 +602,8 @@ flowchart LR
 
     subgraph Core["编排层"]
         C1["core/orchestrator.py"]
+        C2["core/skills.py"]
+        C3["core/agent_skills.py"]
     end
 
     subgraph Agents["智能体层"]
@@ -586,10 +618,17 @@ flowchart LR
         T1["trip_structurer"]
         T2["weather_lookup"]
         T3["hotel_search"]
-        T4["attraction_search"]
-        T5["image_search"]
-        T6["route_plan"]
-        T7["amap_geocode / amap_poi_search"]
+        T4["restaurant_search / meal_planner"]
+        T5["attraction_search / smart_stop_order"]
+        T6["image_search"]
+        T7["route_plan"]
+        T8["place_resolver / amap_geocode / amap_poi_search"]
+    end
+
+    subgraph Skills["官方 Skill 目录"]
+        S1["skills/place-resolver/SKILL.md"]
+        S2["skills/smart-stop-order/SKILL.md"]
+        S3["skills/meal-planner/SKILL.md"]
     end
 
     subgraph Data["数据与会话层"]
@@ -622,6 +661,8 @@ flowchart LR
     API2 --> M1
 
     C1 --> D1
+    C1 --> C2
+    C1 --> C3
     D1 --> D2
 
     C1 --> A1
@@ -635,19 +676,22 @@ flowchart LR
     A4 --> A0
 
     A1 --> T1
+    A1 --> T8
     A4 --> T2
     A4 --> T3
     A4 --> T4
     A4 --> T5
     A4 --> T6
-    T3 --> T7
-    T4 --> T7
-    T6 --> T7
+    A4 --> T7
+    T3 --> T8
+    T4 --> T8
+    T5 --> T8
+    T7 --> T8
 
     T2 --> E1
-    T7 --> E2
-    T6 --> E3
-    T5 --> E4
+    T8 --> E2
+    T7 --> E3
+    T6 --> E4
 
     C1 --> I1
     C1 --> I2
@@ -659,6 +703,9 @@ flowchart LR
     A3 --> M1
     A4 --> M1
     D1 --> M1
+    C3 --> S1
+    C3 --> S2
+    C3 --> S3
 ```
 
 ### 这张图的阅读重点
@@ -666,8 +713,11 @@ flowchart LR
 - 前端和后端通过 `/api/chat` 解耦
 - `core/orchestrator.py` 是系统核心
 - agent 负责“思考与分工”
+- `core/skills.py` 负责用户侧旅行偏好
+- `core/agent_skills.py` 负责 agent skills 注册
 - tools 负责“实时数据能力”
 - data 层负责会话和缓存
+- `skills/` 目录保持官方 `SKILL.md` 格式
 - 外部能力已经明显分成高德和 Serper 两条线
 
 ---
@@ -678,7 +728,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    U["用户问题"] --> FE["前端聊天页"]
+    U["用户问题 + 旅行偏好"] --> FE["前端旅行工作台"]
     FE --> API["FastAPI /api/chat"]
     API --> ORCH["TravelOrchestrator"]
 
@@ -688,9 +738,10 @@ flowchart TB
     ORCH --> T["TransportStayAgent"]
     ORCH --> I["InfoAgent"]
 
-    P --> TS["trip_structurer"]
+    P --> TS["trip_structurer + place_resolver"]
     I --> W["高德天气"]
-    I --> POI["高德 POI"]
+    I --> POI["高德 POI + 餐饮 POI"]
+    I --> STOP["smart_stop_order"]
     I --> R["高德路线规划"]
     I --> IMG["Serper 图片搜索"]
 
@@ -699,7 +750,8 @@ flowchart TB
 
     LLM --> API
     API --> FE
-    FE --> OUT["文本回答 + 酒店卡 + 景点卡 + 图片 + 路线"]
+    FE --> PDF["PDF 导出"]
+    FE --> OUT["文本回答 + 酒店卡 + 景点卡 + 图片 + 用餐 + 路线"]
 ```
 
 ---
