@@ -1,0 +1,918 @@
+2026-04-08 13:12:47,671 | INFO | travel_assistant | chat start | user=u1 session=SESSION-B63FE72FA5 message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 13:12:47,672 | INFO | travel_assistant | intent detected | session=SESSION-B63FE72FA5 intent=qa confidence=0.65
+2026-04-08 13:12:47,675 | INFO | travel_assistant | agent finished | session=SESSION-B63FE72FA5 agent=planner confidence=0.80 tools=1
+2026-04-08 13:12:47,676 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 13:12:47,676 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 13:12:47,678 | INFO | travel_assistant | tool memory saved | session=SESSION-B63FE72FA5 tool=trip_structurer
+2026-04-08 13:12:47,679 | INFO | travel_assistant | agent finished | session=SESSION-B63FE72FA5 agent=destination confidence=0.72 tools=0
+2026-04-08 13:12:47,679 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 13:12:47,679 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 13:12:47,680 | INFO | travel_assistant | agent finished | session=SESSION-B63FE72FA5 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 13:12:47,680 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 13:12:47,680 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 13:12:47,680 | INFO | travel_assistant | agent finished | session=SESSION-B63FE72FA5 agent=info confidence=0.75 tools=0
+2026-04-08 13:12:47,681 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 13:12:47,681 | INFO | travel_assistant | agent trace | session=SESSION-B63FE72FA5 agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 13:12:47,681 | INFO | travel_assistant | chat complete | session=SESSION-B63FE72FA5 intent=qa sources=0 followups=1
+2026-04-08 13:18:16,799 | INFO | travel_assistant | chat start | user=u1 session=SESSION-3B82137158 message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 13:18:16,801 | INFO | travel_assistant | intent detected | session=SESSION-3B82137158 intent=qa confidence=0.65
+2026-04-08 13:18:16,804 | INFO | travel_assistant | agent finished | session=SESSION-3B82137158 agent=planner confidence=0.80 tools=1
+2026-04-08 13:18:16,804 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 13:18:16,804 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 13:18:16,806 | INFO | travel_assistant | tool memory saved | session=SESSION-3B82137158 tool=trip_structurer
+2026-04-08 13:18:16,806 | INFO | travel_assistant | agent finished | session=SESSION-3B82137158 agent=destination confidence=0.72 tools=0
+2026-04-08 13:18:16,807 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 13:18:16,807 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 13:18:16,807 | INFO | travel_assistant | agent finished | session=SESSION-3B82137158 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 13:18:16,808 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 13:18:16,808 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 13:18:16,809 | INFO | travel_assistant | agent finished | session=SESSION-3B82137158 agent=info confidence=0.75 tools=0
+2026-04-08 13:18:16,809 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 13:18:16,809 | INFO | travel_assistant | agent trace | session=SESSION-3B82137158 agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 13:18:16,810 | INFO | travel_assistant | chat complete | session=SESSION-3B82137158 intent=qa sources=0 followups=1
+2026-04-08 13:22:51,726 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-E116378C6E message=杭州4月15日的天气怎么样。我想去旅游
+2026-04-08 13:22:51,728 | INFO | travel_assistant | intent detected | session=SESSION-E116378C6E intent=weather_check confidence=0.82
+2026-04-08 13:22:51,731 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=planner confidence=0.80 tools=1
+2026-04-08 13:22:51,731 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 13:22:51,731 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 13:22:51,734 | INFO | travel_assistant | tool memory saved | session=SESSION-E116378C6E tool=trip_structurer
+2026-04-08 13:22:51,735 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=destination confidence=0.72 tools=0
+2026-04-08 13:22:51,735 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 13:22:51,735 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 13:22:51,735 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=transport_stay confidence=0.70 tools=0
+2026-04-08 13:22:51,735 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 13:22:51,735 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 13:22:51,736 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=info confidence=0.75 tools=1
+2026-04-08 13:22:51,736 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 13:22:51,736 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 13:22:51,737 | INFO | travel_assistant | tool memory saved | session=SESSION-E116378C6E tool=web_search
+2026-04-08 13:22:56,987 | INFO | travel_assistant | chat complete | session=SESSION-E116378C6E intent=weather_check sources=0 followups=2
+2026-04-08 13:23:27,159 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-E116378C6E message=我想去杭州玩4天
+2026-04-08 13:23:27,161 | INFO | travel_assistant | intent detected | session=SESSION-E116378C6E intent=qa confidence=0.65
+2026-04-08 13:23:27,163 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=planner confidence=0.80 tools=1
+2026-04-08 13:23:27,163 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination']
+2026-04-08 13:23:27,163 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 13:23:27,168 | INFO | travel_assistant | tool memory saved | session=SESSION-E116378C6E tool=trip_structurer
+2026-04-08 13:23:27,169 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=destination confidence=0.72 tools=0
+2026-04-08 13:23:27,170 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 13:23:27,170 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 13:23:27,171 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=transport_stay confidence=0.70 tools=0
+2026-04-08 13:23:27,171 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 13:23:27,171 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 13:23:27,172 | INFO | travel_assistant | agent finished | session=SESSION-E116378C6E agent=info confidence=0.75 tools=0
+2026-04-08 13:23:27,172 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 13:23:27,172 | INFO | travel_assistant | agent trace | session=SESSION-E116378C6E agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 13:23:42,791 | INFO | travel_assistant | chat complete | session=SESSION-E116378C6E intent=qa sources=0 followups=1
+2026-04-08 13:45:36,240 | INFO | travel_assistant | chat start | user=u1 session=SESSION-3DFCEFA1FE message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 13:45:36,241 | INFO | travel_assistant | intent detected | session=SESSION-3DFCEFA1FE intent=qa confidence=0.65
+2026-04-08 13:45:36,244 | INFO | travel_assistant | agent finished | session=SESSION-3DFCEFA1FE agent=planner confidence=0.80 tools=1
+2026-04-08 13:45:36,244 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 13:45:36,244 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 13:45:36,245 | INFO | travel_assistant | tool memory saved | session=SESSION-3DFCEFA1FE tool=trip_structurer
+2026-04-08 13:45:36,245 | INFO | travel_assistant | agent finished | session=SESSION-3DFCEFA1FE agent=destination confidence=0.72 tools=0
+2026-04-08 13:45:36,245 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 13:45:36,245 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 13:45:36,246 | INFO | travel_assistant | agent finished | session=SESSION-3DFCEFA1FE agent=transport_stay confidence=0.70 tools=0
+2026-04-08 13:45:36,246 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 13:45:36,246 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 13:45:36,246 | INFO | travel_assistant | agent finished | session=SESSION-3DFCEFA1FE agent=info confidence=0.75 tools=0
+2026-04-08 13:45:36,246 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 13:45:36,246 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 13:45:36,247 | INFO | travel_assistant | agent trace | session=SESSION-3DFCEFA1FE agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 13:45:36,247 | INFO | travel_assistant | chat complete | session=SESSION-3DFCEFA1FE intent=qa sources=0 followups=1
+2026-04-08 13:58:47,035 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-055F83BC0D message=五一去杭州玩3天。   帮我推荐路线和景点
+2026-04-08 13:58:47,037 | INFO | travel_assistant | intent detected | session=SESSION-055F83BC0D intent=qa confidence=0.65
+2026-04-08 13:58:47,041 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=planner confidence=0.80 tools=1
+2026-04-08 13:58:47,041 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination']
+2026-04-08 13:58:47,041 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 13:58:47,044 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=trip_structurer
+2026-04-08 13:58:47,044 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=destination confidence=0.72 tools=0
+2026-04-08 13:58:47,044 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 13:58:47,044 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 13:58:47,045 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=transport_stay confidence=0.70 tools=0
+2026-04-08 13:58:47,045 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 13:58:47,045 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 13:58:49,289 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=info confidence=0.75 tools=1
+2026-04-08 13:58:49,289 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 13:58:49,289 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 13:58:49,289 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 13:58:49,291 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=web_search
+2026-04-08 13:59:03,101 | INFO | travel_assistant | chat complete | session=SESSION-055F83BC0D intent=qa sources=5 followups=1
+2026-04-08 14:00:00,167 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-055F83BC0D message=给我一些西湖的图片
+2026-04-08 14:00:00,172 | INFO | travel_assistant | intent detected | session=SESSION-055F83BC0D intent=qa confidence=0.65
+2026-04-08 14:00:00,172 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=planner confidence=0.80 tools=1
+2026-04-08 14:00:00,173 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 14:00:00,173 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:00:00,175 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=trip_structurer
+2026-04-08 14:00:00,176 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=destination confidence=0.72 tools=0
+2026-04-08 14:00:00,176 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 14:00:00,176 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:00:00,177 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:00:00,177 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 14:00:00,177 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:00:00,178 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=info confidence=0.75 tools=0
+2026-04-08 14:00:00,178 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:00:00,178 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:00:00,178 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:00:06,510 | INFO | travel_assistant | chat complete | session=SESSION-055F83BC0D intent=qa sources=0 followups=2
+2026-04-08 14:01:57,389 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-055F83BC0D message=杭州景点图片 + 酒店推荐 + 路线引导
+2026-04-08 14:01:57,391 | INFO | travel_assistant | intent detected | session=SESSION-055F83BC0D intent=transport_advice confidence=0.82
+2026-04-08 14:01:57,393 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=planner confidence=0.80 tools=1
+2026-04-08 14:01:57,393 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 14:01:57,393 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:01:57,395 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=trip_structurer
+2026-04-08 14:01:57,396 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=destination confidence=0.72 tools=0
+2026-04-08 14:01:57,396 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 14:01:57,396 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:01:57,397 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:01:57,397 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 14:01:57,397 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:02:06,066 | INFO | travel_assistant | agent finished | session=SESSION-055F83BC0D agent=info confidence=0.75 tools=3
+2026-04-08 14:02:06,066 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:02:06,066 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:02:06,066 | INFO | travel_assistant | agent trace | session=SESSION-055F83BC0D agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:02:06,068 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=web_search
+2026-04-08 14:02:06,069 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=hotel_search
+2026-04-08 14:02:06,070 | INFO | travel_assistant | tool memory saved | session=SESSION-055F83BC0D tool=image_search
+2026-04-08 14:02:20,244 | INFO | travel_assistant | chat complete | session=SESSION-055F83BC0D intent=transport_advice sources=5 followups=2
+2026-04-08 14:39:33,668 | INFO | travel_assistant | chat start | user=u1 session=SESSION-650309A33A message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 14:39:33,670 | INFO | travel_assistant | intent detected | session=SESSION-650309A33A intent=qa confidence=0.65
+2026-04-08 14:39:33,674 | INFO | travel_assistant | agent finished | session=SESSION-650309A33A agent=planner confidence=0.80 tools=1
+2026-04-08 14:39:33,674 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 14:39:33,674 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:39:33,676 | INFO | travel_assistant | tool memory saved | session=SESSION-650309A33A tool=trip_structurer
+2026-04-08 14:39:33,676 | INFO | travel_assistant | agent finished | session=SESSION-650309A33A agent=destination confidence=0.72 tools=0
+2026-04-08 14:39:33,677 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 14:39:33,677 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:39:33,678 | INFO | travel_assistant | agent finished | session=SESSION-650309A33A agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:39:33,678 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 14:39:33,678 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:39:33,679 | INFO | travel_assistant | agent finished | session=SESSION-650309A33A agent=info confidence=0.75 tools=0
+2026-04-08 14:39:33,679 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:39:33,680 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:39:33,680 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:39:33,680 | INFO | travel_assistant | agent trace | session=SESSION-650309A33A agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 14:39:33,681 | INFO | travel_assistant | chat complete | session=SESSION-650309A33A intent=qa sources=0 followups=1
+2026-04-08 14:51:16,720 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-9FB6779FF8 message=我想去杭州玩
+2026-04-08 14:51:16,723 | INFO | travel_assistant | intent detected | session=SESSION-9FB6779FF8 intent=qa confidence=0.65
+2026-04-08 14:51:16,727 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=planner confidence=0.80 tools=1
+2026-04-08 14:51:16,727 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-08 14:51:16,727 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:51:16,729 | INFO | travel_assistant | tool memory saved | session=SESSION-9FB6779FF8 tool=trip_structurer
+2026-04-08 14:51:16,730 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=destination confidence=0.72 tools=0
+2026-04-08 14:51:16,730 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 14:51:16,730 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:51:16,730 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:51:16,730 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 14:51:16,730 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:51:16,731 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=info confidence=0.75 tools=0
+2026-04-08 14:51:16,731 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:51:16,731 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:51:16,731 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:51:16,731 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 14:51:22,219 | INFO | travel_assistant | chat complete | session=SESSION-9FB6779FF8 intent=qa sources=0 followups=1
+2026-04-08 14:52:06,252 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-9FB6779FF8 message=我刚才说要去哪玩来着
+2026-04-08 14:52:06,253 | INFO | travel_assistant | intent detected | session=SESSION-9FB6779FF8 intent=destination_choice confidence=0.82
+2026-04-08 14:52:06,254 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=planner confidence=0.80 tools=1
+2026-04-08 14:52:06,254 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-08 14:52:06,254 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:52:06,256 | INFO | travel_assistant | tool memory saved | session=SESSION-9FB6779FF8 tool=trip_structurer
+2026-04-08 14:52:06,257 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=destination confidence=0.72 tools=0
+2026-04-08 14:52:06,257 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=destination 根据当前目的地画像判断推荐重点: 哪
+2026-04-08 14:52:06,257 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:52:06,257 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:52:06,257 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 哪 展开。
+2026-04-08 14:52:06,257 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:52:13,330 | INFO | travel_assistant | agent finished | session=SESSION-9FB6779FF8 agent=info confidence=0.75 tools=3
+2026-04-08 14:52:13,330 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:52:13,331 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:52:13,331 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:52:13,331 | INFO | travel_assistant | agent trace | session=SESSION-9FB6779FF8 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 14:52:13,333 | INFO | travel_assistant | tool memory saved | session=SESSION-9FB6779FF8 tool=hotel_search:{"city": "哪", "limit": 4}
+2026-04-08 14:52:13,334 | INFO | travel_assistant | tool memory saved | session=SESSION-9FB6779FF8 tool=attraction_search:{"city": "哪", "limit": 4}
+2026-04-08 14:52:13,336 | INFO | travel_assistant | tool memory saved | session=SESSION-9FB6779FF8 tool=image_search:{"limit": 6, "query": "哪 景点 旅游 图片"}
+2026-04-08 14:52:16,000 | INFO | travel_assistant | chat complete | session=SESSION-9FB6779FF8 intent=destination_choice sources=0 followups=1
+2026-04-08 14:58:49,351 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-22455FAFDA message=五一出发去上海玩两天怎么样
+2026-04-08 14:58:49,352 | INFO | travel_assistant | intent detected | session=SESSION-22455FAFDA intent=qa confidence=0.65
+2026-04-08 14:58:49,354 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=planner confidence=0.80 tools=1
+2026-04-08 14:58:49,354 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-08 14:58:49,354 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:58:49,356 | INFO | travel_assistant | tool memory saved | session=SESSION-22455FAFDA tool=trip_structurer
+2026-04-08 14:58:49,357 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=destination confidence=0.72 tools=0
+2026-04-08 14:58:49,357 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-08 14:58:49,357 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=info confidence=0.75 tools=0
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:58:49,358 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:58:49,359 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 14:58:55,461 | INFO | travel_assistant | chat complete | session=SESSION-22455FAFDA intent=qa sources=0 followups=1
+2026-04-08 14:59:09,446 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-22455FAFDA message=上海五一的天气怎么样
+2026-04-08 14:59:09,447 | INFO | travel_assistant | intent detected | session=SESSION-22455FAFDA intent=weather_check confidence=0.82
+2026-04-08 14:59:09,448 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=planner confidence=0.80 tools=1
+2026-04-08 14:59:09,448 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 14:59:09,448 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 14:59:09,449 | INFO | travel_assistant | tool memory saved | session=SESSION-22455FAFDA tool=trip_structurer
+2026-04-08 14:59:09,450 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=destination confidence=0.72 tools=0
+2026-04-08 14:59:09,450 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-08 14:59:09,450 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 14:59:09,451 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=transport_stay confidence=0.70 tools=0
+2026-04-08 14:59:09,451 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-08 14:59:09,451 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 14:59:12,975 | INFO | travel_assistant | agent finished | session=SESSION-22455FAFDA agent=info confidence=0.75 tools=2
+2026-04-08 14:59:12,975 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 识别是否属于最新/实时类问题，必要时触发实时搜索。
+2026-04-08 14:59:12,975 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 如果已知目的地且问题涉及天气，则补充天气工具结果。
+2026-04-08 14:59:12,975 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 当用户在规划行程时，额外准备酒店推荐、景点图片和路线引导卡片。
+2026-04-08 14:59:12,975 | INFO | travel_assistant | agent trace | session=SESSION-22455FAFDA agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 14:59:12,977 | INFO | travel_assistant | tool memory saved | session=SESSION-22455FAFDA tool=weather_lookup:{"days": 3, "latitude": 31.2304, "longitude": 121.4737}
+2026-04-08 14:59:12,978 | INFO | travel_assistant | tool memory saved | session=SESSION-22455FAFDA tool=web_search:{"limit": 5, "query": "上海五一的天气怎么样"}
+2026-04-08 14:59:17,679 | INFO | travel_assistant | chat complete | session=SESSION-22455FAFDA intent=weather_check sources=6 followups=2
+2026-04-08 15:15:28,008 | INFO | travel_assistant | chat start | user=u1 session=SESSION-E7F5EBDF9B message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 15:15:28,009 | INFO | travel_assistant | intent detected | session=SESSION-E7F5EBDF9B intent=qa confidence=0.65
+2026-04-08 15:15:28,013 | INFO | travel_assistant | agent finished | session=SESSION-E7F5EBDF9B agent=planner confidence=0.80 tools=1
+2026-04-08 15:15:28,014 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 15:15:28,014 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 15:15:28,015 | INFO | travel_assistant | tool memory saved | session=SESSION-E7F5EBDF9B tool=trip_structurer
+2026-04-08 15:15:28,016 | INFO | travel_assistant | agent finished | session=SESSION-E7F5EBDF9B agent=destination confidence=0.72 tools=0
+2026-04-08 15:15:28,016 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 15:15:28,017 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 15:15:28,018 | INFO | travel_assistant | agent finished | session=SESSION-E7F5EBDF9B agent=transport_stay confidence=0.70 tools=0
+2026-04-08 15:15:28,018 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 15:15:28,018 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 15:15:28,019 | INFO | travel_assistant | agent finished | session=SESSION-E7F5EBDF9B agent=info confidence=0.75 tools=0
+2026-04-08 15:15:28,020 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 15:15:28,020 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 15:15:28,020 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 15:15:28,021 | INFO | travel_assistant | agent trace | session=SESSION-E7F5EBDF9B agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 15:15:28,022 | INFO | travel_assistant | chat complete | session=SESSION-E7F5EBDF9B intent=qa sources=0 followups=1
+2026-04-08 15:19:25,200 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-AEF0A2E7CC message=五一上海的天气怎么样
+2026-04-08 15:19:25,202 | INFO | travel_assistant | intent detected | session=SESSION-AEF0A2E7CC intent=weather_check confidence=0.82
+2026-04-08 15:19:25,205 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=planner confidence=0.80 tools=1
+2026-04-08 15:19:25,205 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 15:19:25,205 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 15:19:25,208 | INFO | travel_assistant | tool memory saved | session=SESSION-AEF0A2E7CC tool=trip_structurer
+2026-04-08 15:19:25,209 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=destination confidence=0.72 tools=0
+2026-04-08 15:19:25,209 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 15:19:25,209 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 15:19:25,210 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=transport_stay confidence=0.70 tools=0
+2026-04-08 15:19:25,210 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 15:19:25,210 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 15:19:25,211 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=info confidence=0.75 tools=0
+2026-04-08 15:19:25,211 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 15:19:25,211 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 15:19:25,211 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 15:19:25,211 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 15:19:28,417 | INFO | travel_assistant | chat complete | session=SESSION-AEF0A2E7CC intent=weather_check sources=0 followups=2
+2026-04-08 15:19:53,100 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-AEF0A2E7CC message=五一假期不是五天吗
+2026-04-08 15:19:53,101 | INFO | travel_assistant | intent detected | session=SESSION-AEF0A2E7CC intent=qa confidence=0.65
+2026-04-08 15:19:53,102 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=planner confidence=0.80 tools=1
+2026-04-08 15:19:53,102 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 15:19:53,102 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 15:19:53,104 | INFO | travel_assistant | tool memory saved | session=SESSION-AEF0A2E7CC tool=trip_structurer
+2026-04-08 15:19:53,104 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=destination confidence=0.72 tools=0
+2026-04-08 15:19:53,104 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 15:19:53,104 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 15:19:53,105 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=transport_stay confidence=0.70 tools=0
+2026-04-08 15:19:53,105 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 15:19:53,105 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 15:19:53,105 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=info confidence=0.75 tools=0
+2026-04-08 15:19:53,105 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 15:19:53,106 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 15:19:53,106 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 15:19:53,106 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 15:19:55,494 | INFO | travel_assistant | chat complete | session=SESSION-AEF0A2E7CC intent=qa sources=0 followups=2
+2026-04-08 15:21:35,921 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-AEF0A2E7CC message=帮我生成详细的计划 我的预算是10000元
+2026-04-08 15:21:35,923 | INFO | travel_assistant | intent detected | session=SESSION-AEF0A2E7CC intent=budget_planning confidence=0.82
+2026-04-08 15:21:35,924 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=planner confidence=0.80 tools=1
+2026-04-08 15:21:35,924 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['budget']
+2026-04-08 15:21:35,925 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 15:21:35,927 | INFO | travel_assistant | tool memory saved | session=SESSION-AEF0A2E7CC tool=trip_structurer
+2026-04-08 15:21:35,929 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=destination confidence=0.72 tools=0
+2026-04-08 15:21:35,929 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 15:21:35,929 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 15:21:35,930 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=transport_stay confidence=0.70 tools=0
+2026-04-08 15:21:35,931 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 15:21:35,931 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 15:21:35,932 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=info confidence=0.75 tools=0
+2026-04-08 15:21:35,932 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 15:21:35,932 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 15:21:35,932 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 15:21:35,932 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 15:21:43,847 | INFO | travel_assistant | chat complete | session=SESSION-AEF0A2E7CC intent=budget_planning sources=0 followups=2
+2026-04-08 15:22:05,089 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-AEF0A2E7CC message=出发去上海
+2026-04-08 15:22:05,092 | INFO | travel_assistant | intent detected | session=SESSION-AEF0A2E7CC intent=qa confidence=0.65
+2026-04-08 15:22:05,094 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=planner confidence=0.80 tools=1
+2026-04-08 15:22:05,094 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-08 15:22:05,094 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 15:22:05,119 | INFO | travel_assistant | tool memory saved | session=SESSION-AEF0A2E7CC tool=trip_structurer
+2026-04-08 15:22:05,120 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=destination confidence=0.72 tools=0
+2026-04-08 15:22:05,120 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-08 15:22:05,120 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 15:22:05,120 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=transport_stay confidence=0.70 tools=0
+2026-04-08 15:22:05,120 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-08 15:22:05,120 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 15:22:05,121 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=info confidence=0.75 tools=0
+2026-04-08 15:22:05,121 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 15:22:05,121 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 15:22:05,121 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 15:22:05,121 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 15:22:14,642 | INFO | travel_assistant | chat complete | session=SESSION-AEF0A2E7CC intent=qa sources=0 followups=1
+2026-04-08 15:23:32,049 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-AEF0A2E7CC message=出发城市为杭州。游玩天书为4天。人数为1人
+2026-04-08 15:23:32,054 | INFO | travel_assistant | intent detected | session=SESSION-AEF0A2E7CC intent=qa confidence=0.65
+2026-04-08 15:23:32,056 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=planner confidence=0.80 tools=1
+2026-04-08 15:23:32,056 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days']
+2026-04-08 15:23:32,056 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 15:23:32,060 | INFO | travel_assistant | tool memory saved | session=SESSION-AEF0A2E7CC tool=trip_structurer
+2026-04-08 15:23:32,062 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=destination confidence=0.72 tools=0
+2026-04-08 15:23:32,062 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-08 15:23:32,062 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 15:23:32,065 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=transport_stay confidence=0.70 tools=0
+2026-04-08 15:23:32,065 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-08 15:23:32,065 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 15:23:32,067 | INFO | travel_assistant | agent finished | session=SESSION-AEF0A2E7CC agent=info confidence=0.75 tools=0
+2026-04-08 15:23:32,067 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 15:23:32,067 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 15:23:32,067 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 15:23:32,067 | INFO | travel_assistant | agent trace | session=SESSION-AEF0A2E7CC agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 15:23:46,462 | INFO | travel_assistant | chat complete | session=SESSION-AEF0A2E7CC intent=qa sources=0 followups=1
+2026-04-08 16:42:39,058 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-429118AD12 message=五一出发去上海玩两天怎么样
+2026-04-08 16:42:39,060 | INFO | travel_assistant | intent detected | session=SESSION-429118AD12 intent=qa confidence=0.65
+2026-04-08 16:42:39,064 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=planner confidence=0.80 tools=1
+2026-04-08 16:42:39,064 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-08 16:42:39,064 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 16:42:39,066 | INFO | travel_assistant | tool memory saved | session=SESSION-429118AD12 tool=trip_structurer
+2026-04-08 16:42:39,067 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=destination confidence=0.72 tools=0
+2026-04-08 16:42:39,067 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-08 16:42:39,068 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 16:42:39,068 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 16:42:39,068 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-08 16:42:39,068 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 16:42:39,069 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=info confidence=0.75 tools=0
+2026-04-08 16:42:39,069 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 16:42:39,069 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 16:42:39,069 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 16:42:39,069 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 16:42:45,864 | INFO | travel_assistant | chat complete | session=SESSION-429118AD12 intent=qa sources=0 followups=1
+2026-04-08 16:43:21,621 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-429118AD12 message=从杭州出发。不带小孩。 就一个人。 100000预算
+2026-04-08 16:43:21,622 | INFO | travel_assistant | intent detected | session=SESSION-429118AD12 intent=budget_planning confidence=0.82
+2026-04-08 16:43:21,623 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=planner confidence=0.80 tools=1
+2026-04-08 16:43:21,623 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['origin']
+2026-04-08 16:43:21,623 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 16:43:21,625 | INFO | travel_assistant | tool memory saved | session=SESSION-429118AD12 tool=trip_structurer
+2026-04-08 16:43:21,626 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=destination confidence=0.72 tools=0
+2026-04-08 16:43:21,626 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-08 16:43:21,626 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=transport_stay 交通住宿建议围绕路线 杭州 -> 上海 展开。
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent finished | session=SESSION-429118AD12 agent=info confidence=0.75 tools=0
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 16:43:21,627 | INFO | travel_assistant | agent trace | session=SESSION-429118AD12 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 16:43:37,782 | INFO | travel_assistant | chat complete | session=SESSION-429118AD12 intent=budget_planning sources=0 followups=2
+2026-04-08 18:32:46,218 | INFO | travel_assistant | chat start | user=u1 session=SESSION-E60740E89C message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 18:32:46,224 | INFO | travel_assistant | intent detected | session=SESSION-E60740E89C intent=qa confidence=0.65
+2026-04-08 18:32:46,225 | INFO | travel_assistant | agent finished | session=SESSION-E60740E89C agent=planner confidence=0.80 tools=1
+2026-04-08 18:32:46,225 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 18:32:46,225 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:32:46,226 | INFO | travel_assistant | tool memory saved | session=SESSION-E60740E89C tool=trip_structurer
+2026-04-08 18:32:46,227 | INFO | travel_assistant | agent finished | session=SESSION-E60740E89C agent=destination confidence=0.72 tools=0
+2026-04-08 18:32:46,227 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 18:32:46,227 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:32:46,227 | INFO | travel_assistant | agent finished | session=SESSION-E60740E89C agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:32:46,228 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 18:32:46,228 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:32:46,228 | INFO | travel_assistant | agent finished | session=SESSION-E60740E89C agent=info confidence=0.75 tools=0
+2026-04-08 18:32:46,228 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:32:46,229 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:32:46,229 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:32:46,229 | INFO | travel_assistant | agent trace | session=SESSION-E60740E89C agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:32:46,230 | INFO | travel_assistant | chat complete | session=SESSION-E60740E89C intent=qa sources=0 followups=1
+2026-04-08 18:33:00,968 | INFO | travel_assistant | chat start | user=u1 session=SESSION-3C42E49581 message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 18:33:00,969 | INFO | travel_assistant | intent detected | session=SESSION-3C42E49581 intent=qa confidence=0.65
+2026-04-08 18:33:00,970 | INFO | travel_assistant | agent finished | session=SESSION-3C42E49581 agent=planner confidence=0.80 tools=1
+2026-04-08 18:33:00,970 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 18:33:00,971 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:33:00,971 | INFO | travel_assistant | tool memory saved | session=SESSION-3C42E49581 tool=trip_structurer
+2026-04-08 18:33:00,972 | INFO | travel_assistant | agent finished | session=SESSION-3C42E49581 agent=destination confidence=0.72 tools=0
+2026-04-08 18:33:00,972 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 18:33:00,972 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:33:00,973 | INFO | travel_assistant | agent finished | session=SESSION-3C42E49581 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:33:00,973 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 18:33:00,973 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:33:00,974 | INFO | travel_assistant | agent finished | session=SESSION-3C42E49581 agent=info confidence=0.75 tools=0
+2026-04-08 18:33:00,974 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:33:00,974 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:33:00,974 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:33:00,974 | INFO | travel_assistant | agent trace | session=SESSION-3C42E49581 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:33:00,975 | INFO | travel_assistant | chat complete | session=SESSION-3C42E49581 intent=qa sources=0 followups=1
+2026-04-08 18:52:40,988 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-244492C1F2 message=今天杭州天气怎么样
+2026-04-08 18:52:40,989 | INFO | travel_assistant | intent detected | session=SESSION-244492C1F2 intent=weather_check confidence=0.82
+2026-04-08 18:52:40,991 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=planner confidence=0.80 tools=1
+2026-04-08 18:52:40,991 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 18:52:40,991 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:52:40,998 | INFO | travel_assistant | tool memory saved | session=SESSION-244492C1F2 tool=trip_structurer
+2026-04-08 18:52:40,999 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=destination confidence=0.72 tools=0
+2026-04-08 18:52:40,999 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 18:52:40,999 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:52:41,000 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:52:41,000 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 18:52:41,000 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:52:41,000 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=info confidence=0.75 tools=0
+2026-04-08 18:52:41,000 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:52:41,000 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:52:41,001 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:52:41,001 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:52:44,325 | INFO | travel_assistant | chat complete | session=SESSION-244492C1F2 intent=weather_check sources=0 followups=2
+2026-04-08 18:53:00,663 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-244492C1F2 message=今天是多少号
+2026-04-08 18:53:00,665 | INFO | travel_assistant | intent detected | session=SESSION-244492C1F2 intent=qa confidence=0.65
+2026-04-08 18:53:00,665 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=planner confidence=0.80 tools=1
+2026-04-08 18:53:00,665 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 18:53:00,665 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:53:00,667 | INFO | travel_assistant | tool memory saved | session=SESSION-244492C1F2 tool=trip_structurer
+2026-04-08 18:53:00,667 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=destination confidence=0.72 tools=0
+2026-04-08 18:53:00,667 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 18:53:00,667 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:53:00,668 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:53:00,668 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 18:53:00,668 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:53:00,668 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=info confidence=0.75 tools=0
+2026-04-08 18:53:00,669 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:53:00,669 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:53:00,669 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:53:00,669 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:53:03,360 | INFO | travel_assistant | chat complete | session=SESSION-244492C1F2 intent=qa sources=0 followups=2
+2026-04-08 18:53:46,084 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-244492C1F2 message=今天多少号。杭州天气怎么样
+2026-04-08 18:53:46,088 | INFO | travel_assistant | intent detected | session=SESSION-244492C1F2 intent=weather_check confidence=0.82
+2026-04-08 18:53:46,089 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=planner confidence=0.80 tools=1
+2026-04-08 18:53:46,089 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 18:53:46,089 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:53:46,091 | INFO | travel_assistant | tool memory saved | session=SESSION-244492C1F2 tool=trip_structurer
+2026-04-08 18:53:46,092 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=destination confidence=0.72 tools=0
+2026-04-08 18:53:46,092 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=destination 根据当前目的地画像判断推荐重点: 未明确目的地
+2026-04-08 18:53:46,092 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:53:46,094 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:53:46,094 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 目的地 展开。
+2026-04-08 18:53:46,094 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:53:46,095 | INFO | travel_assistant | agent finished | session=SESSION-244492C1F2 agent=info confidence=0.75 tools=0
+2026-04-08 18:53:46,095 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:53:46,095 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:53:46,095 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:53:46,095 | INFO | travel_assistant | agent trace | session=SESSION-244492C1F2 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:53:48,781 | INFO | travel_assistant | chat complete | session=SESSION-244492C1F2 intent=weather_check sources=0 followups=2
+2026-04-08 18:55:58,821 | INFO | travel_assistant | chat start | user=u1 session=SESSION-EABF635D06 message=五一从上海出发去杭州玩2天怎么样
+2026-04-08 18:55:58,824 | INFO | travel_assistant | intent detected | session=SESSION-EABF635D06 intent=qa confidence=0.65
+2026-04-08 18:55:58,825 | INFO | travel_assistant | agent finished | session=SESSION-EABF635D06 agent=planner confidence=0.80 tools=1
+2026-04-08 18:55:58,825 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-08 18:55:58,825 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:55:58,826 | INFO | travel_assistant | tool memory saved | session=SESSION-EABF635D06 tool=trip_structurer
+2026-04-08 18:55:58,827 | INFO | travel_assistant | agent finished | session=SESSION-EABF635D06 agent=destination confidence=0.72 tools=0
+2026-04-08 18:55:58,827 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 18:55:58,827 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:55:58,827 | INFO | travel_assistant | agent finished | session=SESSION-EABF635D06 agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:55:58,828 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-08 18:55:58,828 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:55:58,828 | INFO | travel_assistant | agent finished | session=SESSION-EABF635D06 agent=info confidence=0.75 tools=0
+2026-04-08 18:55:58,828 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:55:58,829 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:55:58,829 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:55:58,829 | INFO | travel_assistant | agent trace | session=SESSION-EABF635D06 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:55:58,830 | INFO | travel_assistant | chat complete | session=SESSION-EABF635D06 intent=qa sources=0 followups=1
+2026-04-08 18:57:47,615 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-51D580673A message=今天杭州天气怎么样
+2026-04-08 18:57:50,165 | INFO | travel_assistant | intent detected | session=SESSION-51D580673A intent=weather_check confidence=0.95
+2026-04-08 18:57:50,166 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=planner confidence=0.80 tools=1
+2026-04-08 18:57:50,166 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-08 18:57:50,166 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:57:50,169 | INFO | travel_assistant | tool memory saved | session=SESSION-51D580673A tool=trip_structurer
+2026-04-08 18:57:50,169 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=destination confidence=0.72 tools=0
+2026-04-08 18:57:50,169 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 18:57:50,169 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:57:50,170 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:57:50,171 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 18:57:50,171 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:57:50,422 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=info confidence=0.75 tools=1
+2026-04-08 18:57:50,422 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:57:50,422 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:57:50,422 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:57:50,422 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:57:50,424 | INFO | travel_assistant | tool memory saved | session=SESSION-51D580673A tool=weather_lookup:{"city": "杭州", "extensions": "base"}
+2026-04-08 18:57:50,427 | INFO | travel_assistant | chat complete | session=SESSION-51D580673A intent=weather_check sources=1 followups=1
+2026-04-08 18:58:25,385 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-51D580673A message=钱塘区是哪个城市的区
+2026-04-08 18:58:27,403 | INFO | travel_assistant | intent detected | session=SESSION-51D580673A intent=qa confidence=0.95
+2026-04-08 18:58:27,406 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=planner confidence=0.80 tools=1
+2026-04-08 18:58:27,406 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=planner 读取用户需求并尝试抽取结构化旅行字段: []
+2026-04-08 18:58:27,406 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-08 18:58:27,411 | INFO | travel_assistant | tool memory saved | session=SESSION-51D580673A tool=trip_structurer
+2026-04-08 18:58:27,414 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=destination confidence=0.72 tools=0
+2026-04-08 18:58:27,414 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-08 18:58:27,414 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-08 18:58:27,415 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=transport_stay confidence=0.70 tools=0
+2026-04-08 18:58:27,415 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-08 18:58:27,415 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-08 18:58:27,419 | INFO | travel_assistant | agent finished | session=SESSION-51D580673A agent=info confidence=0.75 tools=0
+2026-04-08 18:58:27,419 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-08 18:58:27,419 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-08 18:58:27,419 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-08 18:58:27,419 | INFO | travel_assistant | agent trace | session=SESSION-51D580673A agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-08 18:58:28,750 | INFO | travel_assistant | chat complete | session=SESSION-51D580673A intent=qa sources=0 followups=2
+2026-04-09 13:59:01,984 | INFO | travel_assistant | chat start | user=u1 session=SESSION-379402DF07 message=五一从上海出发去杭州玩2天怎么样
+2026-04-09 13:59:01,990 | INFO | travel_assistant | intent detected | session=SESSION-379402DF07 intent=qa confidence=0.65
+2026-04-09 13:59:01,991 | INFO | travel_assistant | agent finished | session=SESSION-379402DF07 agent=planner confidence=0.80 tools=1
+2026-04-09 13:59:01,991 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-09 13:59:01,991 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 13:59:01,992 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 13:59:01,992 | INFO | travel_assistant | tool memory saved | session=SESSION-379402DF07 tool=trip_structurer
+2026-04-09 13:59:01,993 | INFO | travel_assistant | agent finished | session=SESSION-379402DF07 agent=destination confidence=0.72 tools=0
+2026-04-09 13:59:01,993 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 13:59:01,993 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 13:59:01,994 | INFO | travel_assistant | agent finished | session=SESSION-379402DF07 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 13:59:01,994 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-09 13:59:01,994 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 13:59:01,994 | INFO | travel_assistant | agent finished | session=SESSION-379402DF07 agent=info confidence=0.75 tools=0
+2026-04-09 13:59:01,995 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 13:59:01,995 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 13:59:01,995 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 13:59:01,995 | INFO | travel_assistant | agent trace | session=SESSION-379402DF07 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 13:59:01,996 | INFO | travel_assistant | chat complete | session=SESSION-379402DF07 intent=qa sources=0 followups=1
+2026-04-09 13:59:22,347 | INFO | travel_assistant | chat start | user=u1 session=SESSION-553F50C84F message=五一从上海出发去杭州玩2天怎么样
+2026-04-09 13:59:22,347 | INFO | travel_assistant | intent detected | session=SESSION-553F50C84F intent=qa confidence=0.65
+2026-04-09 13:59:22,348 | INFO | travel_assistant | agent finished | session=SESSION-553F50C84F agent=planner confidence=0.80 tools=1
+2026-04-09 13:59:22,348 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-09 13:59:22,349 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 13:59:22,349 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 13:59:22,349 | INFO | travel_assistant | tool memory saved | session=SESSION-553F50C84F tool=trip_structurer
+2026-04-09 13:59:22,350 | INFO | travel_assistant | agent finished | session=SESSION-553F50C84F agent=destination confidence=0.72 tools=0
+2026-04-09 13:59:22,350 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 13:59:22,350 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 13:59:22,351 | INFO | travel_assistant | agent finished | session=SESSION-553F50C84F agent=transport_stay confidence=0.70 tools=0
+2026-04-09 13:59:22,351 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-09 13:59:22,351 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 13:59:22,352 | INFO | travel_assistant | agent finished | session=SESSION-553F50C84F agent=info confidence=0.75 tools=0
+2026-04-09 13:59:22,352 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 13:59:22,352 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 13:59:22,353 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 13:59:22,353 | INFO | travel_assistant | agent trace | session=SESSION-553F50C84F agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 13:59:22,354 | INFO | travel_assistant | chat complete | session=SESSION-553F50C84F intent=qa sources=0 followups=1
+2026-04-09 14:05:47,439 | INFO | travel_assistant | chat start | user=u1 session=SESSION-876880A1E0 message=五一从上海出发去杭州玩2天怎么样
+2026-04-09 14:05:47,441 | INFO | travel_assistant | intent detected | session=SESSION-876880A1E0 intent=qa confidence=0.65
+2026-04-09 14:05:47,442 | INFO | travel_assistant | agent finished | session=SESSION-876880A1E0 agent=planner confidence=0.80 tools=1
+2026-04-09 14:05:47,442 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-09 14:05:47,442 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:05:47,442 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 14:05:47,442 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由']
+2026-04-09 14:05:47,443 | INFO | travel_assistant | tool memory saved | session=SESSION-876880A1E0 tool=trip_structurer
+2026-04-09 14:05:47,444 | INFO | travel_assistant | agent finished | session=SESSION-876880A1E0 agent=destination confidence=0.72 tools=0
+2026-04-09 14:05:47,444 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:05:47,444 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:05:47,444 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调']
+2026-04-09 14:05:47,445 | INFO | travel_assistant | agent finished | session=SESSION-876880A1E0 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:05:47,445 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-09 14:05:47,445 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:05:47,445 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:05:47,446 | INFO | travel_assistant | agent finished | session=SESSION-876880A1E0 agent=info confidence=0.75 tools=0
+2026-04-09 14:05:47,446 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:05:47,446 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:05:47,446 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:05:47,446 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:05:47,447 | INFO | travel_assistant | agent trace | session=SESSION-876880A1E0 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用']
+2026-04-09 14:05:47,447 | INFO | travel_assistant | chat complete | session=SESSION-876880A1E0 intent=qa sources=0 followups=1
+2026-04-09 14:05:47,450 | INFO | travel_assistant | chat start | user=u1 session=SESSION-2119401E1B message=杭州怎么玩
+2026-04-09 14:05:47,452 | INFO | travel_assistant | intent detected | session=SESSION-2119401E1B intent=itinerary_generation confidence=0.82
+2026-04-09 14:05:47,456 | INFO | travel_assistant | agent finished | session=SESSION-2119401E1B agent=planner confidence=0.80 tools=1
+2026-04-09 14:05:47,456 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination', 'skills']
+2026-04-09 14:05:47,456 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:05:47,456 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=planner 当前激活的旅行技能: ['food_hunter']
+2026-04-09 14:05:47,456 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由']
+2026-04-09 14:05:47,457 | INFO | travel_assistant | tool memory saved | session=SESSION-2119401E1B tool=trip_structurer
+2026-04-09 14:05:47,458 | INFO | travel_assistant | agent finished | session=SESSION-2119401E1B agent=destination confidence=0.72 tools=0
+2026-04-09 14:05:47,458 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:05:47,458 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:05:47,458 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调']
+2026-04-09 14:05:47,459 | INFO | travel_assistant | agent finished | session=SESSION-2119401E1B agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:05:47,459 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-09 14:05:47,459 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:05:47,459 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:05:47,493 | INFO | travel_assistant | agent finished | session=SESSION-2119401E1B agent=info confidence=0.75 tools=3
+2026-04-09 14:05:47,493 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:05:47,493 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:05:47,494 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:05:47,494 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:05:47,494 | INFO | travel_assistant | agent trace | session=SESSION-2119401E1B agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用']
+2026-04-09 14:05:47,494 | INFO | travel_assistant | tool memory saved | session=SESSION-2119401E1B tool=hotel_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:05:47,495 | INFO | travel_assistant | tool memory saved | session=SESSION-2119401E1B tool=attraction_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:05:47,496 | INFO | travel_assistant | tool memory saved | session=SESSION-2119401E1B tool=image_search:{"limit": 6, "query": "杭州 景点 旅游 图片"}
+2026-04-09 14:05:47,496 | INFO | travel_assistant | chat complete | session=SESSION-2119401E1B intent=itinerary_generation sources=0 followups=1
+2026-04-09 14:19:05,332 | INFO | travel_assistant | chat start | user=u1 session=SESSION-9729026505 message=五一从上海出发去杭州玩2天怎么样
+2026-04-09 14:19:05,338 | INFO | travel_assistant | intent detected | session=SESSION-9729026505 intent=qa confidence=0.65
+2026-04-09 14:19:05,339 | INFO | travel_assistant | agent finished | session=SESSION-9729026505 agent=planner confidence=0.80 tools=1
+2026-04-09 14:19:05,339 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-09 14:19:05,340 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:19:05,340 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 14:19:05,340 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:19:05,341 | INFO | travel_assistant | tool memory saved | session=SESSION-9729026505 tool=trip_structurer
+2026-04-09 14:19:05,341 | INFO | travel_assistant | agent finished | session=SESSION-9729026505 agent=destination confidence=0.72 tools=0
+2026-04-09 14:19:05,341 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:19:05,342 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:19:05,342 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:19:05,342 | INFO | travel_assistant | agent finished | session=SESSION-9729026505 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:19:05,342 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-09 14:19:05,343 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:19:05,343 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:19:05,343 | INFO | travel_assistant | agent finished | session=SESSION-9729026505 agent=info confidence=0.75 tools=0
+2026-04-09 14:19:05,343 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:19:05,344 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:19:05,344 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:19:05,344 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:19:05,344 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:19:05,344 | INFO | travel_assistant | agent trace | session=SESSION-9729026505 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 14:19:05,345 | INFO | travel_assistant | chat complete | session=SESSION-9729026505 intent=qa sources=0 followups=1
+2026-04-09 14:19:05,349 | INFO | travel_assistant | chat start | user=u1 session=SESSION-89517E64A2 message=杭州怎么玩
+2026-04-09 14:19:05,350 | INFO | travel_assistant | intent detected | session=SESSION-89517E64A2 intent=itinerary_generation confidence=0.82
+2026-04-09 14:19:05,350 | INFO | travel_assistant | agent finished | session=SESSION-89517E64A2 agent=planner confidence=0.80 tools=1
+2026-04-09 14:19:05,351 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination', 'skills']
+2026-04-09 14:19:05,351 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:19:05,351 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=planner 当前激活的旅行技能: ['food_hunter']
+2026-04-09 14:19:05,351 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:19:05,352 | INFO | travel_assistant | tool memory saved | session=SESSION-89517E64A2 tool=trip_structurer
+2026-04-09 14:19:05,352 | INFO | travel_assistant | agent finished | session=SESSION-89517E64A2 agent=destination confidence=0.72 tools=0
+2026-04-09 14:19:05,352 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:19:05,353 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:19:05,353 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:19:05,353 | INFO | travel_assistant | agent finished | session=SESSION-89517E64A2 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:19:05,353 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-09 14:19:05,354 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:19:05,354 | INFO | travel_assistant | agent trace | session=SESSION-89517E64A2 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:19:25,681 | INFO | travel_assistant | chat start | user=u1 session=SESSION-D31C4723F4 message=五一从上海出发去杭州玩2天怎么样
+2026-04-09 14:19:25,682 | INFO | travel_assistant | intent detected | session=SESSION-D31C4723F4 intent=qa confidence=0.65
+2026-04-09 14:19:25,684 | INFO | travel_assistant | agent finished | session=SESSION-D31C4723F4 agent=planner confidence=0.80 tools=1
+2026-04-09 14:19:25,684 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'destination', 'origin']
+2026-04-09 14:19:25,684 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:19:25,684 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 14:19:25,684 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:19:25,685 | INFO | travel_assistant | tool memory saved | session=SESSION-D31C4723F4 tool=trip_structurer
+2026-04-09 14:19:25,686 | INFO | travel_assistant | agent finished | session=SESSION-D31C4723F4 agent=destination confidence=0.72 tools=0
+2026-04-09 14:19:25,686 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:19:25,686 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:19:25,686 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:19:25,687 | INFO | travel_assistant | agent finished | session=SESSION-D31C4723F4 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:19:25,687 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=transport_stay 交通住宿建议围绕路线 上海 -> 杭州 展开。
+2026-04-09 14:19:25,687 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:19:25,688 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:19:25,688 | INFO | travel_assistant | agent finished | session=SESSION-D31C4723F4 agent=info confidence=0.75 tools=0
+2026-04-09 14:19:25,688 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:19:25,688 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:19:25,689 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:19:25,689 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:19:25,689 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:19:25,689 | INFO | travel_assistant | agent trace | session=SESSION-D31C4723F4 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 14:19:25,690 | INFO | travel_assistant | chat complete | session=SESSION-D31C4723F4 intent=qa sources=0 followups=1
+2026-04-09 14:19:25,694 | INFO | travel_assistant | chat start | user=u1 session=SESSION-78BA7BE204 message=杭州怎么玩
+2026-04-09 14:19:25,695 | INFO | travel_assistant | intent detected | session=SESSION-78BA7BE204 intent=itinerary_generation confidence=0.82
+2026-04-09 14:19:25,695 | INFO | travel_assistant | agent finished | session=SESSION-78BA7BE204 agent=planner confidence=0.80 tools=1
+2026-04-09 14:19:25,695 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination', 'skills']
+2026-04-09 14:19:25,696 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:19:25,696 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=planner 当前激活的旅行技能: ['food_hunter']
+2026-04-09 14:19:25,696 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:19:25,697 | INFO | travel_assistant | tool memory saved | session=SESSION-78BA7BE204 tool=trip_structurer
+2026-04-09 14:19:25,697 | INFO | travel_assistant | agent finished | session=SESSION-78BA7BE204 agent=destination confidence=0.72 tools=0
+2026-04-09 14:19:25,697 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:19:25,698 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:19:25,698 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:19:25,698 | INFO | travel_assistant | agent finished | session=SESSION-78BA7BE204 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:19:25,699 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-09 14:19:25,699 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:19:25,699 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:19:25,753 | INFO | travel_assistant | agent finished | session=SESSION-78BA7BE204 agent=info confidence=0.75 tools=4
+2026-04-09 14:19:25,753 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:19:25,753 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:19:25,753 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:19:25,754 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:19:25,754 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:19:25,754 | INFO | travel_assistant | agent trace | session=SESSION-78BA7BE204 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 14:19:25,755 | INFO | travel_assistant | tool memory saved | session=SESSION-78BA7BE204 tool=hotel_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:19:25,756 | INFO | travel_assistant | tool memory saved | session=SESSION-78BA7BE204 tool=attraction_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:19:25,756 | INFO | travel_assistant | tool memory saved | session=SESSION-78BA7BE204 tool=image_search:{"limit": 6, "query": "杭州 景点 旅游 图片"}
+2026-04-09 14:19:25,757 | INFO | travel_assistant | tool memory saved | session=SESSION-78BA7BE204 tool=meal_planner:{"city": "杭州", "limit": 6}
+2026-04-09 14:19:25,757 | INFO | travel_assistant | chat complete | session=SESSION-78BA7BE204 intent=itinerary_generation sources=0 followups=1
+2026-04-09 14:23:54,304 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-CEBD45EF13 message=五一我想去杭州旅行
+2026-04-09 14:23:56,704 | INFO | travel_assistant | intent detected | session=SESSION-CEBD45EF13 intent=destination_choice confidence=0.90
+2026-04-09 14:23:56,705 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=planner confidence=0.80 tools=1
+2026-04-09 14:23:56,705 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination', 'skills']
+2026-04-09 14:23:56,705 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:23:56,705 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 当前激活的旅行技能: ['family_friendly']
+2026-04-09 14:23:56,705 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:23:56,708 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=trip_structurer
+2026-04-09 14:23:56,709 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=destination confidence=0.72 tools=0
+2026-04-09 14:23:56,709 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:23:56,709 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:23:56,709 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:23:56,710 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:23:56,710 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-09 14:23:56,710 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:23:56,710 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=info confidence=0.75 tools=5
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:24:00,257 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 餐饮建议数量: 3，景点排序后数量: 4
+2026-04-09 14:24:00,259 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=hotel_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:24:00,261 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=attraction_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:24:00,262 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=smart_stop_order:{"city": "杭州", "stops": [{"business_area": "新城片区", "description": "新业路311号(钱江新城市民中心K座)", "detail_url": "https://uri.amap.com/marker?position=120.209448,30.247996&name=杭州Do都城&src=travel-assistant", "location": "120.209448,30.247996", "name": "杭州Do都城"}, {"business_area": "钱江新城", "description": "新业路与民心路交叉口东140米", "detail_url": "https://uri.amap.com/marker?position=120.212844,30.248632&name=啪嗒公园&src=travel-assistant", "location": "120.212844,30.248632", "name": "啪嗒公园"}, {"business_area": "新城片区", "description": "新业路(市民中心地铁站L口步行70米)", "detail_url": "https://uri.amap.com/marker?position=120.213056,30.244705&name=市民广场&src=travel-assistant", "location": "120.213056,30.244705", "name": "市民广场"}, {"business_area": "近江", "description": "钱江新城解放东路45号高德置地广场", "detail_url": "https://uri.amap.com/marker?position=120.208397,30.243324&name=如涵文化地广场&src=travel-assistant", "location": "120.208397,30.243324", "name": "如涵文化地广场"}]}
+2026-04-09 14:24:00,263 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=image_search:{"limit": 6, "query": "杭州 景点 旅游 图片"}
+2026-04-09 14:24:00,264 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=meal_planner:{"city": "杭州", "limit": 6}
+2026-04-09 14:24:12,677 | INFO | travel_assistant | chat complete | session=SESSION-CEBD45EF13 intent=destination_choice sources=0 followups=1
+2026-04-09 14:27:00,938 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-CEBD45EF13 message=我喜欢吃甜食。预算无限。  以及我想要看自然风光
+2026-04-09 14:27:03,139 | INFO | travel_assistant | intent detected | session=SESSION-CEBD45EF13 intent=destination_choice confidence=0.80
+2026-04-09 14:27:03,141 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=planner confidence=0.80 tools=2
+2026-04-09 14:27:03,141 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['budget', 'skills']
+2026-04-09 14:27:03,141 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:27:03,141 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 当前激活的旅行技能: ['family_friendly']
+2026-04-09 14:27:03,141 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:27:03,144 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=trip_structurer
+2026-04-09 14:27:03,146 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=place_resolver
+2026-04-09 14:27:03,146 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=destination confidence=0.72 tools=0
+2026-04-09 14:27:03,146 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:27:03,146 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:27:03,146 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:27:03,147 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:27:03,147 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-09 14:27:03,147 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:27:03,147 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=info confidence=0.75 tools=4
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:27:03,148 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 14:27:03,149 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=hotel_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:27:03,150 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=attraction_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:27:03,151 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=image_search:{"limit": 6, "query": "杭州 景点 旅游 图片"}
+2026-04-09 14:27:03,152 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=meal_planner:{"city": "杭州", "limit": 6}
+2026-04-09 14:27:17,199 | INFO | travel_assistant | chat complete | session=SESSION-CEBD45EF13 intent=destination_choice sources=0 followups=2
+2026-04-09 14:28:12,381 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-CEBD45EF13 message=帮我整理一份详细的3天的旅游行程
+2026-04-09 14:28:14,951 | INFO | travel_assistant | intent detected | session=SESSION-CEBD45EF13 intent=itinerary_generation confidence=0.95
+2026-04-09 14:28:14,951 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=planner confidence=0.80 tools=2
+2026-04-09 14:28:14,951 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['days', 'skills']
+2026-04-09 14:28:14,951 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:28:14,951 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 当前激活的旅行技能: ['family_friendly']
+2026-04-09 14:28:14,951 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:28:14,955 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=trip_structurer
+2026-04-09 14:28:14,957 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=place_resolver
+2026-04-09 14:28:14,960 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=destination confidence=0.72 tools=0
+2026-04-09 14:28:14,960 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 根据当前目的地画像判断推荐重点: 杭州
+2026-04-09 14:28:14,960 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:28:14,960 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:28:14,966 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:28:14,966 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 杭州 展开。
+2026-04-09 14:28:14,966 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:28:14,966 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:28:14,968 | INFO | travel_assistant | agent finished | session=SESSION-CEBD45EF13 agent=info confidence=0.75 tools=4
+2026-04-09 14:28:14,968 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:28:14,968 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:28:14,968 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:28:14,968 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:28:14,968 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:28:14,969 | INFO | travel_assistant | agent trace | session=SESSION-CEBD45EF13 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 14:28:14,975 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=hotel_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:28:14,979 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=attraction_search:{"city": "杭州", "limit": 4}
+2026-04-09 14:28:14,980 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=image_search:{"limit": 6, "query": "杭州 景点 旅游 图片"}
+2026-04-09 14:28:14,981 | INFO | travel_assistant | tool memory saved | session=SESSION-CEBD45EF13 tool=meal_planner:{"city": "杭州", "limit": 6}
+2026-04-09 14:28:35,745 | INFO | travel_assistant | chat complete | session=SESSION-CEBD45EF13 intent=itinerary_generation sources=0 followups=1
+2026-04-09 14:37:16,145 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-D08DD8504F message=五一出发去上海玩两天怎么样
+2026-04-09 14:37:18,871 | INFO | travel_assistant | intent detected | session=SESSION-D08DD8504F intent=itinerary_generation confidence=0.90
+2026-04-09 14:37:18,872 | INFO | travel_assistant | agent finished | session=SESSION-D08DD8504F agent=planner confidence=0.80 tools=1
+2026-04-09 14:37:18,872 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['destination']
+2026-04-09 14:37:18,872 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:37:18,872 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 14:37:18,872 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:37:18,875 | INFO | travel_assistant | tool memory saved | session=SESSION-D08DD8504F tool=trip_structurer
+2026-04-09 14:37:18,876 | INFO | travel_assistant | agent finished | session=SESSION-D08DD8504F agent=destination confidence=0.72 tools=0
+2026-04-09 14:37:18,876 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-09 14:37:18,876 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:37:18,876 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:37:18,877 | INFO | travel_assistant | agent finished | session=SESSION-D08DD8504F agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:37:18,877 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-09 14:37:18,877 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:37:18,877 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent finished | session=SESSION-D08DD8504F agent=info confidence=0.75 tools=5
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:37:22,313 | INFO | travel_assistant | agent trace | session=SESSION-D08DD8504F agent=info 餐饮建议数量: 3，景点排序后数量: 4
+2026-04-09 14:37:22,315 | INFO | travel_assistant | tool memory saved | session=SESSION-D08DD8504F tool=hotel_search:{"city": "上海", "limit": 4}
+2026-04-09 14:37:22,317 | INFO | travel_assistant | tool memory saved | session=SESSION-D08DD8504F tool=attraction_search:{"city": "上海", "limit": 4}
+2026-04-09 14:37:22,318 | INFO | travel_assistant | tool memory saved | session=SESSION-D08DD8504F tool=smart_stop_order:{"city": "上海", "stops": [{"business_area": "北京路", "description": "南京西路231号(近黄陂北路)人民公园内(西南角)", "detail_url": "https://uri.amap.com/marker?position=121.472340,31.230637&name=人民公园-西山亭&src=travel-assistant", "location": "121.472340,31.230637", "name": "人民公园-西山亭"}, {"business_area": "淮海路", "description": "南京西路231号(近黄陂北路)人民公园内(西南角)", "detail_url": "https://uri.amap.com/marker?position=121.472508,31.231293&name=人民公园-紫藤架&src=travel-assistant", "location": "121.472508,31.231293", "name": "人民公园-紫藤架"}, {"business_area": "北京路", "description": "人民大道185号(人民广场地铁站1号口步行300米)", "detail_url": "https://uri.amap.com/marker?position=121.474538,31.229377&name=联圩广场&src=travel-assistant", "location": "121.474538,31.229377", "name": "联圩广场"}, {"business_area": "北京路", "description": "南京东路街道南京西路75号人民公园内(西南角)", "detail_url": "https://uri.amap.com/marker?position=121.472064,31.230729&name=人民公园-西山瀑布&src=travel-assistant", "location": "121.472064,31.230729", "name": "人民公园-西山瀑布"}]}
+2026-04-09 14:37:22,319 | INFO | travel_assistant | tool memory saved | session=SESSION-D08DD8504F tool=image_search:{"limit": 6, "query": "上海 景点 旅游 图片"}
+2026-04-09 14:37:22,320 | INFO | travel_assistant | tool memory saved | session=SESSION-D08DD8504F tool=meal_planner:{"city": "上海", "limit": 6}
+2026-04-09 14:37:32,903 | INFO | travel_assistant | chat complete | session=SESSION-D08DD8504F intent=itinerary_generation sources=0 followups=2
+2026-04-09 14:58:17,294 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-491F24F8F5 message=我只有一块钱的预算。我想去郑州旅游‘
+2026-04-09 14:58:19,696 | INFO | travel_assistant | intent detected | session=SESSION-491F24F8F5 intent=budget_planning confidence=0.95
+2026-04-09 14:58:19,696 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=planner confidence=0.80 tools=1
+2026-04-09 14:58:19,696 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['budget', 'destination']
+2026-04-09 14:58:19,697 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 14:58:19,697 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 14:58:19,697 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 14:58:19,700 | INFO | travel_assistant | tool memory saved | session=SESSION-491F24F8F5 tool=trip_structurer
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=destination confidence=0.72 tools=0
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=destination 根据当前目的地画像判断推荐重点: 郑州
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 郑州 展开。
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 14:58:19,701 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=info confidence=0.75 tools=0
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 14:58:19,702 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 14:58:22,989 | INFO | travel_assistant | chat complete | session=SESSION-491F24F8F5 intent=budget_planning sources=0 followups=2
+2026-04-09 15:08:12,683 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-491F24F8F5 message=1000块钱的预算呢
+2026-04-09 15:08:15,178 | INFO | travel_assistant | intent detected | session=SESSION-491F24F8F5 intent=budget_planning confidence=0.95
+2026-04-09 15:08:15,180 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=planner confidence=0.80 tools=2
+2026-04-09 15:08:15,180 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['budget']
+2026-04-09 15:08:15,180 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 15:08:15,180 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 15:08:15,180 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 15:08:15,183 | INFO | travel_assistant | tool memory saved | session=SESSION-491F24F8F5 tool=trip_structurer
+2026-04-09 15:08:15,184 | INFO | travel_assistant | tool memory saved | session=SESSION-491F24F8F5 tool=place_resolver
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=destination confidence=0.72 tools=0
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=destination 根据当前目的地画像判断推荐重点: 郑州
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 郑州 展开。
+2026-04-09 15:08:15,186 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent finished | session=SESSION-491F24F8F5 agent=info confidence=0.75 tools=0
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 15:08:15,187 | INFO | travel_assistant | agent trace | session=SESSION-491F24F8F5 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 15:08:23,626 | INFO | travel_assistant | chat complete | session=SESSION-491F24F8F5 intent=budget_planning sources=0 followups=3
+2026-04-09 15:15:06,191 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-884996E381 message=五一出发去上海玩两天。  5000预算。一个人
+2026-04-09 15:15:09,084 | INFO | travel_assistant | intent detected | session=SESSION-884996E381 intent=budget_planning confidence=0.90
+2026-04-09 15:15:09,085 | INFO | travel_assistant | agent finished | session=SESSION-884996E381 agent=planner confidence=0.80 tools=1
+2026-04-09 15:15:09,085 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['budget', 'destination']
+2026-04-09 15:15:09,085 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 15:15:09,085 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=planner 当前激活的旅行技能: ['无']
+2026-04-09 15:15:09,085 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 15:15:09,088 | INFO | travel_assistant | tool memory saved | session=SESSION-884996E381 tool=trip_structurer
+2026-04-09 15:15:09,089 | INFO | travel_assistant | agent finished | session=SESSION-884996E381 agent=destination confidence=0.72 tools=0
+2026-04-09 15:15:09,089 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=destination 根据当前目的地画像判断推荐重点: 上海
+2026-04-09 15:15:09,089 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 15:15:09,089 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 15:15:09,090 | INFO | travel_assistant | agent finished | session=SESSION-884996E381 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 15:15:09,090 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 上海 展开。
+2026-04-09 15:15:09,090 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 15:15:09,090 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent finished | session=SESSION-884996E381 agent=info confidence=0.75 tools=0
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 15:15:09,091 | INFO | travel_assistant | agent trace | session=SESSION-884996E381 agent=info 餐饮建议数量: 0，景点排序后数量: 0
+2026-04-09 15:15:21,538 | INFO | travel_assistant | chat complete | session=SESSION-884996E381 intent=budget_planning sources=0 followups=2
+2026-04-09 15:22:18,682 | INFO | travel_assistant | chat start | user=demo-user session=SESSION-DF51187E22 message=五一出发去武汉玩两天。帮我生成详细的计划和建议。 10000元预算。 两个人
+2026-04-09 15:22:21,300 | INFO | travel_assistant | intent detected | session=SESSION-DF51187E22 intent=itinerary_generation confidence=0.90
+2026-04-09 15:22:21,302 | INFO | travel_assistant | agent finished | session=SESSION-DF51187E22 agent=planner confidence=0.80 tools=1
+2026-04-09 15:22:21,302 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=planner 读取用户需求并尝试抽取结构化旅行字段: ['budget', 'destination', 'skills']
+2026-04-09 15:22:21,302 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=planner 检查关键缺口，优先关注目的地、时间和天数是否缺失。
+2026-04-09 15:22:21,302 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=planner 当前激活的旅行技能: ['citywalk']
+2026-04-09 15:22:21,302 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=planner 当前 planner agent skills: ['需求结构化', '缺口识别', '偏好路由', 'Place Resolver']
+2026-04-09 15:22:21,305 | INFO | travel_assistant | tool memory saved | session=SESSION-DF51187E22 tool=trip_structurer
+2026-04-09 15:22:21,305 | INFO | travel_assistant | agent finished | session=SESSION-DF51187E22 agent=destination confidence=0.72 tools=0
+2026-04-09 15:22:21,305 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=destination 根据当前目的地画像判断推荐重点: 武汉
+2026-04-09 15:22:21,305 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=destination 优先输出玩法、季节、适合人群和基础注意事项。
+2026-04-09 15:22:21,305 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=destination 当前 destination agent skills: ['季节判断', '人群匹配', '体验定调', 'Meal Planner']
+2026-04-09 15:22:21,306 | INFO | travel_assistant | agent finished | session=SESSION-DF51187E22 agent=transport_stay confidence=0.70 tools=0
+2026-04-09 15:22:21,306 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=transport_stay 交通住宿建议围绕路线 你的出发地 -> 武汉 展开。
+2026-04-09 15:22:21,306 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=transport_stay 优先考虑城市间到达方式和住宿区域选择，而不是具体预订。
+2026-04-09 15:22:21,306 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=transport_stay 当前 transport_stay agent skills: ['到达策略', '片区选址', '成本便利平衡']
+2026-04-09 15:22:24,659 | INFO | travel_assistant | agent finished | session=SESSION-DF51187E22 agent=info confidence=0.75 tools=5
+2026-04-09 15:22:24,662 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=info 天气类问题优先走高德实时接口，而不是抓取通用网页结果。
+2026-04-09 15:22:24,662 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=info 如果用户问的是超出预报窗口的日期，则明确说明当前没有精确实时天气。
+2026-04-09 15:22:24,662 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=info 行程规划类问题使用高德 POI 和路径规划补齐景点、酒店和路线信息。
+2026-04-09 15:22:24,662 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=info 优先复用同会话内已查询过的工具结果，减少重复外部请求。
+2026-04-09 15:22:24,662 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=info 当前 info agent skills: ['天气护栏', 'POI 增强', '工具复用', 'Smart Stop Order', 'Meal Planner']
+2026-04-09 15:22:24,662 | INFO | travel_assistant | agent trace | session=SESSION-DF51187E22 agent=info 餐饮建议数量: 3，景点排序后数量: 4
+2026-04-09 15:22:24,664 | INFO | travel_assistant | tool memory saved | session=SESSION-DF51187E22 tool=hotel_search:{"city": "武汉", "limit": 4}
+2026-04-09 15:22:24,666 | INFO | travel_assistant | tool memory saved | session=SESSION-DF51187E22 tool=attraction_search:{"city": "武汉", "limit": 4}
+2026-04-09 15:22:24,667 | INFO | travel_assistant | tool memory saved | session=SESSION-DF51187E22 tool=smart_stop_order:{"city": "武汉", "stops": [{"business_area": "江滩", "description": "沿江大道188号", "detail_url": "https://uri.amap.com/marker?position=114.304796,30.592672&name=汉口德国领事馆旧址&src=travel-assistant", "location": "114.304796,30.592672", "name": "汉口德国领事馆旧址"}, {"business_area": "大智路", "description": "一元街街道一元街街道一元路2号", "detail_url": "https://uri.amap.com/marker?position=114.303573,30.592943&name=汉口美最时洋行大楼&src=travel-assistant", "location": "114.303573,30.592943", "name": "汉口美最时洋行大楼"}, {"business_area": "大智路", "description": "一元路5号", "detail_url": "https://uri.amap.com/marker?position=114.303416,30.592596&name=江汉关监督公署旧址&src=travel-assistant", "location": "114.303416,30.592596", "name": "江汉关监督公署旧址"}, {"business_area": "大智路", "description": "胜利街259号", "detail_url": "https://uri.amap.com/marker?position=114.303036,30.593744&name=胜利街259-2-5号&src=travel-assistant", "location": "114.303036,30.593744", "name": "胜利街259-2-5号"}]}
+2026-04-09 15:22:24,669 | INFO | travel_assistant | tool memory saved | session=SESSION-DF51187E22 tool=image_search:{"limit": 6, "query": "武汉 景点 旅游 图片"}
+2026-04-09 15:22:24,670 | INFO | travel_assistant | tool memory saved | session=SESSION-DF51187E22 tool=meal_planner:{"city": "武汉", "limit": 6}
+2026-04-09 15:22:43,884 | INFO | travel_assistant | chat complete | session=SESSION-DF51187E22 intent=itinerary_generation sources=0 followups=1

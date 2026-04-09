@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旅行小助手</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <div class="hero">
+          <button id="export-pdf" class="export-button" type="button">导出 PDF</button>
+          <p class="eyebrow">Travel Assistant</p>
+          <h1 class="hero-title">
+            <span class="title-line">把零散问题，</span>
+            <span class="title-line title-art">聊成一份靠谱的旅行建议</span>
+          </h1>
+          <p class="subtitle">支持实时搜索、天气参考和多轮记忆，也能结合你的旅行偏好把结果变得更具体、更好玩。</p>
+        </div>
+        <div class="skill-panel">
+          <div class="skill-panel-head">
+            <h2>旅行偏好</h2>
+            <p>先选一个你这次更在意的方向，助手后续会按这个风格帮你推荐景点、酒店、路线和吃饭安排。</p>
+          </div>
+          <div id="skills" class="skills"></div>
+        </div>
+        <div id="messages" class="messages"></div>
+        <div id="rich-content" class="rich-content hidden"></div>
+        <div id="chips" class="chips"></div>
+        <form id="chat-form" class="composer">
+          <textarea id="message-input" placeholder="例如：五一从上海出发去杭州玩两天怎么样？" rows="3"></textarea>
+          <button type="submit">发送</button>
+        </form>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
