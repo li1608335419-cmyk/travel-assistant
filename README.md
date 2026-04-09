@@ -144,6 +144,51 @@ kill <PID>
 
 ---
 
+## Docker 守护进程部署
+
+如果你要在另一台服务器上长期运行，当前项目已经提供了：
+
+- [Dockerfile](/Users/lixun/Documents/github_code/agent集合/travel-assistant/Dockerfile)
+- [docker-compose.yml](/Users/lixun/Documents/github_code/agent集合/travel-assistant/docker-compose.yml)
+- [`.env.production.example`](/Users/lixun/Documents/github_code/agent集合/travel-assistant/.env.production.example)
+
+推荐步骤：
+
+1. 安装 Docker 和 Docker Compose
+2. 拉取代码到服务器
+3. 复制 [`.env.production.example`](/Users/lixun/Documents/github_code/agent集合/travel-assistant/.env.production.example) 为 `.env`
+4. 填写真实的 `DEEPSEEK_API_KEY`、`SERPER_API_KEY`、`AMAP_WEB_API_KEY`
+5. 确认 `REDIS_HOST=redis`
+6. 执行：
+
+```bash
+docker compose up -d --build
+```
+
+常用命令：
+
+```bash
+docker compose ps
+docker compose logs -f app
+docker compose logs -f redis
+docker compose restart app
+docker compose down
+```
+
+部署后访问：
+
+- 首页：`http://<服务器IP>:8010`
+- 健康检查：`http://<服务器IP>:8010/api/health`
+
+说明：
+
+- `app` 服务会以守护进程方式持续运行
+- `redis` 会跟随 Compose 一起启动
+- 日志目录会映射到宿主机的 `./logs`
+- 如果你后面要接域名，建议在 Docker 外层再加 `Nginx` 反向代理
+
+---
+
 ## 核心模块补充
 
 除了原有的 `Planner / Destination / TransportStay / Info` 四个 agent，当前还有两层“能力”概念：
