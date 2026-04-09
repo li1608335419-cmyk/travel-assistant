@@ -1,7 +1,7 @@
 # 旅行小助手
 
 基于 `FastAPI + Redis + 多 Agent 编排 + 高德 Web Service API` 的旅行顾问智能体。  
-项目支持多轮对话、结构化旅行需求提取、酒店与景点推荐、景点图片展示、地图路线引导，以及基于 Redis 的短期记忆。
+项目支持多轮对话、结构化旅行需求提取、酒店与景点推荐、景点图片展示、地图路线引导、旅行偏好卡片选择、计划 PDF 导出，以及基于 Redis 的短期记忆。
 
 ---
 
@@ -21,11 +21,38 @@
 - 问答式旅行顾问
 - Redis 短期记忆
 - 多 Agent 编排
+- 规则 + LLM 混合意图识别
 - 高德天气查询
 - 高德酒店 / 景点 POI 搜索
 - 高德路线规划
+- 地点解析与模糊位置纠错
+- 多景点顺路排序
+- 餐饮 / 用餐建议
 - 景点图片展示
+- 彩色旅行偏好卡片
+- 行程 PDF 导出
 - 日志记录与执行追踪
+
+---
+
+## 当前前端体验
+
+当前前端已经不是简单的聊天框，而是一体化旅行工作台：
+
+- 顶部 Hero 区采用艺术字标题
+- 旅行偏好做成彩色卡片，可直接点选
+- 中间区域展示多轮对话
+- 下方可展示酒店、景点、图片、用餐、路线等富内容卡片
+- 右上角可直接导出当前会话为 PDF 计划书
+
+PDF 导出目前包含：
+
+- 封面页
+- 行程摘要页
+- 酒店 / 景点 / 用餐卡片式摘要
+- 路线概览
+- 对话记录
+- 自动带出导出日期和目的地标题
 
 ---
 
@@ -37,7 +64,7 @@ travel-assistant/
 ├── agents/           # Planner / Destination / TransportStay / Info
 ├── core/             # 编排器
 ├── data/             # Redis 会话与工具缓存
-├── frontend/         # 静态前端页面
+├── frontend/         # 单页旅行工作台前端
 ├── logs/             # app.log 与 execution_*.jsonl
 ├── models/           # Pydantic 数据模型
 ├── skills/           # 官方 SKILL.md 格式的 agent skills
@@ -51,6 +78,15 @@ travel-assistant/
 - `skills/place-resolver/SKILL.md`
 - `skills/smart-stop-order/SKILL.md`
 - `skills/meal-planner/SKILL.md`
+
+这些 skills 采用官方 `SKILL.md` 目录格式，并且已经实际接入当前项目逻辑：
+
+- `place-resolver`
+  - 解决模糊地点表达、附近/周边/片区词解析
+- `smart-stop-order`
+  - 对多景点做轻量顺路排序，减少折返
+- `meal-planner`
+  - 补充早餐 / 午餐 / 晚餐建议，让推荐更完整
 
 ---
 
@@ -97,6 +133,33 @@ uvicorn api.app:app --port 8010
 
 - 首页：`http://127.0.0.1:8010`
 - 健康检查：`http://127.0.0.1:8010/api/health`
+- 技能目录接口：`http://127.0.0.1:8010/api/skills`
+
+如果 `8010` 端口已被占用，可以先停止旧进程再启动：
+
+```bash
+lsof -nP -iTCP:8010 -sTCP:LISTEN
+kill <PID>
+```
+
+---
+
+## 核心模块补充
+
+除了原有的 `Planner / Destination / TransportStay / Info` 四个 agent，当前还有两层“能力”概念：
+
+1. 用户侧旅行偏好
+- 用于影响推荐风格
+- 例如：预算优化、美食雷达、出片路线、亲子友好、Citywalk、雨天备选
+
+2. Agent skills
+- 用于增强 agent 的内部执行能力
+- 当前已接入官方格式 skill：
+  - `place-resolver`
+  - `smart-stop-order`
+  - `meal-planner`
+
+前者偏“用户想要什么风格”，后者偏“agent 如何更好地完成任务”。
 
 ---
 
